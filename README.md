@@ -1,4 +1,4 @@
-# algamoney-system
+# AlgaMoney System
 <p align="center"> Sistema Web Gestão Financeira </p>
 <p align="center">
   <a href="#sobre">Sobre</a>
