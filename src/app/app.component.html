@@ -1,30 +1,49 @@
-<p-tabView>
-  <p-tabPanel header="Header 1">
-     Content 1
-  </p-tabPanel>
-  <p-tabPanel header="Header 2">
-      Content 2
-  </p-tabPanel>
-  <p-tabPanel header="Header 3">
-      Content 3
-  </p-tabPanel>
-</p-tabView>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h1>Lançamentos</h1>
+  </div>
+</div>
 
-<p-dialog header="Title" >
-  Content
-</p-dialog>
+<div class="p-grid">
+  <label>Descrição</label>
+  <div class="ui-g-12 ui-fluid">
 
-<button type="button" icon="pi pi-info-circle" label="Show"></button>
+    <input type="text" pInputText style="width: 100%"/>
+  </div>
+</div>
 
-<p-calendar></p-calendar>
+<div class="ui-g-12">
+  <label for="vencimento" style="display:block;">Vencimento</label>
+  <input type="text" pInputText style="width: 95px;">
 
-<button pButton type="button" label="Click" ></button>
-<p-button label="Click" ></p-button>
+  <label for="">até</label>
+  <input type="text" pInputText style="width: 95px;">
+</div>
 
-<button pButton type="button" label="Small" icon="pi pi-check" class="p-button-sm"></button>
-<button pButton type="button" label="Normal" icon="pi pi-check" class="p-button"></button>
-<button pButton type="button" label="Large" icon="pi pi-check" class="p-button-lg"></button>
-
+<div class="ui-g-12">
+  <button pButton type="submit" label="Pesquisar" style="margin-top: 10px;"></button>
+</div>
 
 
+
+<p-table [value]="lancamentos" responsiveLayout="scroll" styleClass="p-datatable-striped">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Pessoa</th>
+          <th>Descrição</th>
+          <th>Vencimento</th>
+          <th>Pagamento</th>
+          <th>Valor</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-lancamentos>
+      <tr>
+          <td>{{lancamentos.pessoa}}</td>
+          <td>{{lancamentos.descricao}}</td>
+          <td class="col-data">{{lancamentos.dataVencimento}}</td>
+          <td>{{lancamentos.dataPagamento}}</td>
+          <td class="col-valor">{{lancamentos.valor}}</td>
+      </tr>
+  </ng-template>
+</p-table>
 <router-outlet></router-outlet>

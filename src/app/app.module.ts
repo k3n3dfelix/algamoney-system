@@ -1,12 +1,13 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {TabViewModule} from 'primeng/tabview';
-import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
-import {CalendarModule} from 'primeng/calendar';
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +16,10 @@ import {CalendarModule} from 'primeng/calendar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TabViewModule,
-    DialogModule,
+    InputTextModule,
     ButtonModule,
-    CalendarModule
+    TableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
