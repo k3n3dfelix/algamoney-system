@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-
+  margin:0;
   font-family:Arial, Helvetica, sans-serif;
   color: #404C51;
 }
@@ -16,4 +16,8 @@ label{
 .col-data {
   width:120px;
   text-align: center;
+}
+
+.container{
+  margin:10px;
 }
